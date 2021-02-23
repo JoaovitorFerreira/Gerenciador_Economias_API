@@ -1,5 +1,5 @@
 # Gerenciador_Economias_API
-API REST da aplicação Gerenciador de Economias
+API REST da aplicação Gerenciador de Economias, construída utilizando Typescript e Mongodb
 
 
 Para a execução completa da aplicação, é necessário a criação de um arquivo config.ts, com a seguinte linha de comando:
