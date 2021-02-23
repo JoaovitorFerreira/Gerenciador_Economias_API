@@ -1,6 +1,6 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import connect from "./src/Database/DbCon";
+import connect from "./src/Database/DbConnection";
 import { EarningsRouter } from "./src/Routes/EarningsRouter";
 import { ExpensesRouter } from "./src/Routes/ExpensesRouter";
 import { cors } from "cors";
