@@ -5,7 +5,7 @@ export default (db: string) => {
     mongoose
       .connect(db, { useNewUrlParser: true })
       .then(() => {
-        return console.log(`Conectaco ao banco ${db}`);
+        return console.log(`Conectado ao banco ${db}`);
       })
       .catch((error) => {
         console.log("Erro ao conectar ao banco:", error);
@@ -14,5 +14,5 @@ export default (db: string) => {
   };
   connect();
 
-  mongoose.connection.on("Disconectado", connect);
+  mongoose.connection.on("Desconectado", connect);
 };
