@@ -18,12 +18,6 @@ try {
   connect(process.env.MONGODB || db);
   app.use(ExpensesRouter);
   app.use(EarningsRouter);
-  /*app.use(
-    cors({
-      origin: "https://igti-modulo4-desafio.herokuapp.com",
-    })
-  );
-  */
   app.listen(process.env.PORT || port, () => {
     console.log(`Servidor disponível: http://127.0.0.1:${port}/`);
   });
