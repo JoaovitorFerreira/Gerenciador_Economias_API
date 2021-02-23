@@ -5,14 +5,14 @@ export default (db: string) => {
     mongoose
       .connect(db, { useNewUrlParser: true })
       .then(() => {
-        return console.log(`Successfully connected to ${db}`);
+        return console.log(`Conectaco ao banco ${db}`);
       })
       .catch((error) => {
-        console.log("Error connecting to database: ", error);
+        console.log("Erro ao conectar ao banco:", error);
         return process.exit(1);
       });
   };
   connect();
 
-  mongoose.connection.on("disconnected", connect);
+  mongoose.connection.on("Disconectado", connect);
 };

@@ -1,9 +1,11 @@
 import { createLogger, format, transports, Logger } from "winston";
 import { MongoDB, MongoDBConnectionOptions } from "winston-mongodb";
+import {MONGODB} from '../../config';
+
 const { combine, timestamp, label, printf } = format;
-const db =
-  process.env.MONGODB ||
-  "mongodb+srv://genEcoUser:EconDb471@cluster1.g0kcq.mongodb.net/gerenciadorEconomia?retryWrites=true&w=majority";
+
+const db = process.env.MONGODB ||MONGODB;
+
 const myFormat = format.printf(({ level, message, label, timestamp }) => {
   return `${timestamp} [${label}] ${level}: ${message}`;
 });
