@@ -1,4 +1,4 @@
-# Gerenciador_Economias_API
+# Gerenciador Economias API
 API REST da aplicação Gerenciador de Economias, construída utilizando Typescript e Mongodb
 
 
