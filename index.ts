@@ -4,7 +4,7 @@ import connect from "./src/Database/DbConnection";
 import { EarningsRouter } from "./src/Routes/EarningsRouter";
 import { ExpensesRouter } from "./src/Routes/ExpensesRouter";
 import { cors } from "cors";
-import {MONGODB} from "./config";
+import { MONGODB } from "./config";
 
 const db = process.env.MONGODB || MONGODB;
 const localPort = 3003;
@@ -19,7 +19,7 @@ try {
   app.use(ExpensesRouter);
   app.use(EarningsRouter);
   app.listen(process.env.PORT || localPort, () => {
-    console.log(`Servidor disponível: http://127.0.0.1:${port}/`);
+    console.log(`Servidor disponível: http://127.0.0.1:${localPort}/`);
   });
 } catch (error) {
   console.log(error);

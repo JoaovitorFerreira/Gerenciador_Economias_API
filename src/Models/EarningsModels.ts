@@ -6,6 +6,7 @@ export interface IEarnings extends Document {
   year: number;
   name: string;
   value: number;
+  category: string;
 }
 const EarningsSchema: Schema = new Schema({
   month: {
@@ -24,6 +25,11 @@ const EarningsSchema: Schema = new Schema({
     type: Number,
     required: true,
   },
+  category: {
+    type: String,
+    required: true,
+  },
+
 });
 
 EarningsSchema.method("toJSON", function () {

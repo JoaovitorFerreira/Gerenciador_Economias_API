@@ -6,6 +6,7 @@ export interface IExpenses extends Document {
   year: number;
   name: string;
   value: number;
+  category: string;
 }
 const ExpensesSchema: Schema = new Schema({
   month: {
@@ -22,6 +23,10 @@ const ExpensesSchema: Schema = new Schema({
   },
   value: {
     type: Number,
+    required: true,
+  },
+  category: {
+    type: String,
     required: true,
   },
 });
